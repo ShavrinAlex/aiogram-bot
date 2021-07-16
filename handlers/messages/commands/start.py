@@ -1,10 +1,10 @@
-import keyboards
-from loader import dp
 from aiogram.types import Message
+from loader import dp
+import keyboards
 
 @dp.message_handler(commands='start')
 async def start(message: Message):
     await message.answer(
-        text=f'Hello, {message.from_user.full_name}',
+        text=f'Привет, {message.from_user.full_name}',
         reply_markup=keyboards.main.keyboard
     )

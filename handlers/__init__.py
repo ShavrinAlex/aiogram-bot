@@ -1,5 +1,3 @@
-from .start import dp
-from .weather import dp
-from .games import dp
+from .messages import dp
 
 __all__ = ['dp']
