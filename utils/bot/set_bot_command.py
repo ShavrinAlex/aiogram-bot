@@ -5,7 +5,8 @@ from aiogram.types import BotCommand
 commands = {
     'start': 'Главное меню',
     'calc': 'Калькулятор',
-    'weather': 'Прогноз погоды'
+    'weather': 'Прогноз погоды',
+    'games': 'Игры',
 }
 
 async def set_commands(dp: Dispatcher):

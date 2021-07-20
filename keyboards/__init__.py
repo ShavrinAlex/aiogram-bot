@@ -1,4 +1,4 @@
-from . import main
+from . import profile
 from . import games
 from . import calc_operation
-from . import weather_search
+from . import weather_operation

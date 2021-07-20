@@ -15,7 +15,7 @@ async def get_answer(message: Message, state: FSMContext):
 
     await message.answer(
         text=f'{num_1} {operator} {num_2} = {answer}',
-        reply_markup=keyboards.main.keyboard
+        reply_markup=keyboards.profile.keyboard
     )
 
     await state.finish()

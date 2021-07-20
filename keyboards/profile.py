@@ -5,7 +5,7 @@ keyboard = ReplyKeyboardMarkup(
     resize_keyboard=True,
     keyboard=[
         [
-            KeyboardButton(text='Личный кабинет'),
+            KeyboardButton(text='Личный кабинет')
         ]
     ]
 )

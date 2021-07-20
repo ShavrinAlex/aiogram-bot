@@ -7,5 +7,6 @@ import keyboards
 async def start(message: Message):
     await message.answer(
         text=f'Привет, {message.from_user.full_name}',
-        reply_markup=keyboards.main.keyboard
+        reply_markup=keyboards.profile.keyboard
     )
+
