@@ -7,4 +7,5 @@ async def on_startup(dp: Dispatcher):
         chat_id=1369534986,
         text='Бот активирован'
     )
+
     await set_commands(dp)

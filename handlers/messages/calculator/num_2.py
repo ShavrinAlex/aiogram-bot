@@ -17,5 +17,6 @@ async def wait_num_2(message: Message, state: FSMContext):
         text='Хотите получить ответ?',
         reply_markup=keyboards.calc_operation.get_answer
     )
+
     await state.update_data(num2=int(message.text))
     await CalculatorState.answer.set()

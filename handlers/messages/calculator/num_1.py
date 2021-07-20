@@ -3,6 +3,7 @@ from aiogram.types import Message
 from loader import dp
 from states.calculator import CalculatorState
 
+
 @dp.message_handler(state=CalculatorState.num_1)
 async def wait_num_1(message: Message, state: FSMContext):
     if not (message.text.isdigit()):

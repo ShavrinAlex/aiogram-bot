@@ -3,6 +3,7 @@ from aiogram.types import Message
 from loader import dp
 from states.calculator import CalculatorState
 
+
 @dp.message_handler(state=CalculatorState.operator)
 async def wait_operator(message: Message, state: FSMContext):
     if not(message.text in ['+', '-', '*', '/']):
@@ -14,5 +15,6 @@ async def wait_operator(message: Message, state: FSMContext):
     await message.answer(
         text='Введите первое число'
     )
+
     await state.update_data(operator=message.text)
     await CalculatorState.num_1.set()

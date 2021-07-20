@@ -10,4 +10,5 @@ async def calc(message: Message):
         text='Введите оператор',
         reply_markup=keyboards.calc_operation.keyboard
     )
+
     await CalculatorState.operator.set()

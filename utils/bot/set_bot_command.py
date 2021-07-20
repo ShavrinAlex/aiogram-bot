@@ -1,9 +1,11 @@
 from aiogram import Dispatcher
 from aiogram.types import BotCommand
 
+
 commands = {
     'start': 'Главное меню',
-    'calc': 'Калькулятор'
+    'calc': 'Калькулятор',
+    'weather': 'Прогноз погоды'
 }
 
 async def set_commands(dp: Dispatcher):
