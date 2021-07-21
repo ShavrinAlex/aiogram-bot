@@ -14,7 +14,7 @@ async def wait_num_2(message: Message, state: FSMContext):
         return False
 
     await message.answer(
-        text='Хотите получить ответ?',
+        text='Чтобы узнать результат, нажмите кнопку "Получить ответ"',
         reply_markup=keyboards.calc_operation.get_answer
     )
 

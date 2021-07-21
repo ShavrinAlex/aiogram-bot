@@ -1,4 +1,5 @@
-from .block import dp
-from .darts import dp
+from .send_emoji import dp
+from .guessing import dp
+
 
 __all__ = ['dp']

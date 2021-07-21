@@ -22,7 +22,7 @@ async def get_data(message: Message, state: FSMContext):
             text='Чтобы получить данные, нажмите на кнопку "Узнать погоду"',
             reply_markup=keyboards.weather_operation.keyboard
         )
-    else:
-        await message.reply(
-            text='Проверьте правильность написания названия города'
-        )
+
+    await message.reply(
+        text='Проверьте правильность написания названия города'
+    )

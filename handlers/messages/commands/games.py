@@ -1,11 +1,11 @@
 from aiogram.types import Message
+import keyboards.games
 from loader import dp
-import keyboards
 
 
 @dp.message_handler(commands='games')
 async def games(message: Message):
     await message.answer(
-        text='В какую игру будем играть?',
+        text='Выберите тип игр',
         reply_markup=keyboards.games.keyboard
     )

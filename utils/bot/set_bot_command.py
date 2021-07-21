@@ -6,7 +6,7 @@ commands = {
     'start': 'Главное меню',
     'calc': 'Калькулятор',
     'weather': 'Прогноз погоды',
-    'games': 'Игры',
+    'games': 'Игры'
 }
 
 async def set_commands(dp: Dispatcher):

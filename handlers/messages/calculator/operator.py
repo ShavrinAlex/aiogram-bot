@@ -6,7 +6,7 @@ from states.calculator import CalculatorState
 
 @dp.message_handler(state=CalculatorState.operator)
 async def wait_operator(message: Message, state: FSMContext):
-    if not(message.text in ['+', '-', '*', '/']):
+    if not (message.text in ['+', '-', '*', '/']):
         await message.reply(
             text='Воспользуйтесь клавиатурой'
         )
