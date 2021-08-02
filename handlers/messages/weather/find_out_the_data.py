@@ -24,7 +24,7 @@ async def output_data(message: Message, state: FSMContext):
         f"***{datetime.now().strftime('%Y-%m-%d %H:%M')}***\n"
         f'Страна: {country}\nГород: {city}\nТемпература: {temp}°C\nОщущается как: {temp_feels_like}°C\n'
         f'Небо: {sky}\nВлажность: {humidity}%\nДавление: {pressure} мм.рт.ст\nВетер: {wind} м/с',
-        reply_markup=keyboards.profile.keyboard
+        reply_markup=keyboards.profile_operation.keyboard
     )
 
     await state.finish()

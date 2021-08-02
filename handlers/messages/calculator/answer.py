@@ -7,15 +7,17 @@ from states.calculator import CalculatorState
 
 @dp.message_handler(text='Получить ответ', state=CalculatorState.answer)
 async def get_answer(message: Message, state: FSMContext):
+    # Записываем все переменные
     state_data = await state.get_data()
     num_1 = state_data['num1']
     num_2 = state_data['num2']
     operator = state_data['operator']
     answer = eval(f'{num_1} {operator} {num_2}')
 
+    # Выводим ответ
     await message.answer(
         text=f'{num_1} {operator} {num_2} = {answer}',
-        reply_markup=keyboards.profile.keyboard
+        reply_markup=keyboards.profile_operation.keyboard
     )
 
     await state.finish()

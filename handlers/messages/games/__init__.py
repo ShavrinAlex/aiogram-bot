@@ -1,4 +1,4 @@
-from .send_emoji import dp
+from .simple_games import dp
 from .guessing import dp
 
 

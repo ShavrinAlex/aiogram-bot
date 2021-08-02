@@ -6,6 +6,7 @@ from states.calculator import CalculatorState
 
 @dp.message_handler(state=CalculatorState.num_1)
 async def wait_num_1(message: Message, state: FSMContext):
+    # Проверяем: не является ли сообщение числом
     if not (message.text.isdigit()):
         await message.reply(
             text='Это не число'

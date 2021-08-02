@@ -7,5 +7,5 @@ import keyboards
 async def games(message: Message):
     await message.answer(
         text='В какую игру будем играть?',
-        reply_markup=keyboards.simple_games.keyboard
+        reply_markup=keyboards.games.simple_games.keyboard
     )

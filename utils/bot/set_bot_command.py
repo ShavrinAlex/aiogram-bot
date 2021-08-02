@@ -3,10 +3,11 @@ from aiogram.types import BotCommand
 
 
 commands = {
-    'start': 'Главное меню',
+    'profile': 'Профиль',
     'calc': 'Калькулятор',
     'weather': 'Прогноз погоды',
-    'games': 'Игры'
+    'games': 'Игры',
+    'registration': 'Регистрация'
 }
 
 async def set_commands(dp: Dispatcher):
