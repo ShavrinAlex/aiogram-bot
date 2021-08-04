@@ -1,11 +1,13 @@
-from aiogram.types import Message
+from aiogram.types import CallbackQuery
+from keyboards.games.inline.callback_datas import game_callback
 from loader import dp
 import keyboards
 
 
-@dp.message_handler(text='Простые игры')
-async def games(message: Message):
-    await message.answer(
-        text='В какую игру будем играть?',
+@dp.callback_query_handler(game_callback.filter(type_game='simple_games'))
+async def games(call: CallbackQuery):
+    await call.message.edit_reply_markup()
+    await call.message.answer(
+        text='Я могу бросить кубик или дротик',
         reply_markup=keyboards.games.simple_games.keyboard
     )

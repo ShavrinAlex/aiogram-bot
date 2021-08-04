@@ -5,10 +5,11 @@ keyboard = ReplyKeyboardMarkup(
     resize_keyboard=True,
     keyboard=[
         [
-            KeyboardButton(text='Бросить кубик')
+            KeyboardButton(text='Бросить кубик'),
+            KeyboardButton(text='Бросить дротик')
         ],
         [
-            KeyboardButton(text='Бросить дротик')
+            KeyboardButton(text='Отмена')
         ]
     ]
 )

@@ -17,6 +17,7 @@ keyboard = ReplyKeyboardMarkup(
 )
 
 get_answer = ReplyKeyboardMarkup(
+    one_time_keyboard=True,
     resize_keyboard=True,
     keyboard=[
         [

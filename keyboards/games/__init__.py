@@ -1,3 +1,2 @@
-from . import games
-from . import guessing
+from . import inline
 from . import simple_games

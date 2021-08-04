@@ -7,8 +7,7 @@ from loader import dp
 @dp.message_handler(state='*')
 async def message_answer(message: Message, state: FSMContext):
     await message.answer(
-        text='Неизвестная комманда, вы перемещенны на главное меню',
-        reply_markup=keyboards.profile_operation.keyboard
+        text='Неизвестная комманда'
     )
 
     await state.finish()

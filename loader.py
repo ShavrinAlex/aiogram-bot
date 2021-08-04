@@ -4,4 +4,4 @@ from config import BOT_TOKEN
 
 
 bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher(bot=bot, storage=MemoryStorage())
+dp: Dispatcher = Dispatcher(bot=bot, storage=MemoryStorage())

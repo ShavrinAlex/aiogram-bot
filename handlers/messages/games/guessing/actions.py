@@ -1,6 +1,5 @@
 from aiogram.dispatcher import FSMContext
 from aiogram.types import Message
-import keyboards
 from handlers.messages.games.guessing.comparison import more_or_less_or_equal
 from utils.db_api.tables.user import User
 
@@ -16,15 +15,13 @@ async def win(message: Message, state: FSMContext):
     if User.is_user(user_id):
         await message.answer(
             text=f"{more_or_less_or_equal(int(message.text), my_num)}\n"
-                 f"Вы выйграли 5 токенов",
-            reply_markup=keyboards.profile_operation.keyboard
+                 f"Вы выйграли 5 токенов"
         )
         User.cash_up(user_id, money=5)
     else:
         await message.answer(
             text=f"{more_or_less_or_equal(int(message.text), my_num)}\n"
-                 f"Но вы не зарегестрированы, поэтому мы не можем начислить вам выйгрыш",
-            reply_markup=keyboards.profile_operation.keyboard
+                 f"Но вы не зарегестрированы, поэтому мы не можем начислить вам выйгрыш"
         )
     await state.finish()
 
@@ -51,14 +48,12 @@ async def losses(message: Message, state: FSMContext):
         await message.answer(
             text=f'Ничего страшного, тебе обязательно повезет в другой раз!\n'
                  f"A загаданное мной число было: {(await state.get_data())['my_num']}\n"
-                 f"Вы проиграли 1 токен",
-            reply_markup=keyboards.profile_operation.keyboard
+                 f"Вы проиграли 1 токен"
         )
         User.cash_down(user_id, money=1)
     else:
         await message.answer(
             text=f'Ничего страшного, тебе обязательно повезет в другой раз!\n'
-                 f"A загаданное мной число было: {(await state.get_data())['my_num']}",
-            reply_markup=keyboards.profile_operation.keyboard
+                 f"A загаданное мной число было: {(await state.get_data())['my_num']}"
         )
     await state.finish()

@@ -7,6 +7,6 @@ from loader import dp
 async def games(message: Message):
     # Просим выбрать тип игры с выведеной клавиатуры
     await message.answer(
-        text='Выберите тип игр',
-        reply_markup=keyboards.games.games.keyboard
+        text='Выберите тип игр:',
+        reply_markup=keyboards.games.inline.games.keyboard
     )

@@ -1,7 +1,6 @@
 from datetime import datetime
 from aiogram.dispatcher import FSMContext
 from aiogram.types import Message
-import keyboards
 from loader import dp
 from states.weather import WeatherState
 
@@ -23,8 +22,6 @@ async def output_data(message: Message, state: FSMContext):
     await message.reply(
         f"***{datetime.now().strftime('%Y-%m-%d %H:%M')}***\n"
         f'Страна: {country}\nГород: {city}\nТемпература: {temp}°C\nОщущается как: {temp_feels_like}°C\n'
-        f'Небо: {sky}\nВлажность: {humidity}%\nДавление: {pressure} мм.рт.ст\nВетер: {wind} м/с',
-        reply_markup=keyboards.profile_operation.keyboard
+        f'Небо: {sky}\nВлажность: {humidity}%\nДавление: {pressure} мм.рт.ст\nВетер: {wind} м/с'
     )
-
     await state.finish()
