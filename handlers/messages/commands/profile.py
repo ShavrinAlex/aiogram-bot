@@ -10,7 +10,7 @@ async def start(message: Message):
     if User.is_user(message.from_user.id):
         await message.answer(
             text=f'Привет, {message.from_user.full_name}',
-            reply_markup=keyboards.profile.inline.profile_operation.keyboard
+            reply_markup=keyboards.profile.all_operation.profile_operation.keyboard
         )
     else:
         await message.answer(

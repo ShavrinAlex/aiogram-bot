@@ -4,9 +4,6 @@ from aiogram.types import BotCommand
 
 commands = {
     'profile': 'Профиль',
-    'calc': 'Калькулятор',
-    'weather': 'Прогноз погоды',
-    'games': 'Игры',
     'registration': 'Регистрация'
 }
 

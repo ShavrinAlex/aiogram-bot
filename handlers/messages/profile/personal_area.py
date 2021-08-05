@@ -1,5 +1,5 @@
 from aiogram.types import CallbackQuery
-from keyboards.profile.inline.callback_datas import profile_callback
+from keyboards.profile.all_operation.callback_datas import profile_callback
 from loader import dp
 from utils.db_api.tables.user import User
 
